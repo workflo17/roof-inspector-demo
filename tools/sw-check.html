@@ -1,0 +1,30 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>sw check</title>
+<pre id="out">running</pre>
+<script>
+/* Verification page: registers the service worker, waits for it to activate, then reads the
+   ASSETS list out of sw.js itself and asks the cache for every file in it. Run in headless Chrome
+   with --dump-dom and read the JSON. A file missing from the cache means the app would not
+   open offline. */
+(async () => {
+  const out = {};
+  try {
+    const reg = await navigator.serviceWorker.register('../sw.js', { scope: '../' });
+    await navigator.serviceWorker.ready;
+    const sw = reg.installing || reg.waiting || reg.active;
+    await new Promise(res => {
+      if (sw.state === 'activated') return res();
+      sw.addEventListener('statechange', () => { if (sw.state === 'activated') res(); });
+    });
+    out.registered = true;
+    const src = await (await fetch('../sw.js', { cache: 'no-store' })).text();
+    const list = [...src.match(/const ASSETS = \[([\s\S]*?)\];/)[1].matchAll(/'([^']+)'/g)].map(x => x[1]);
+    out.assets = {};
+    for (const a of list) out.assets[a] = !!(await caches.match(new URL('../' + a, location.href)));
+    out.cacheKeys = await caches.keys();
+  } catch (e) { out.error = String(e); }
+  document.getElementById('out').textContent = JSON.stringify(out);
+  document.title = 'done';
+})();
+</script>

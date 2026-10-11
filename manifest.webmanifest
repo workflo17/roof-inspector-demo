@@ -1,0 +1,16 @@
+{
+  "name": "Roof Inspector (demo)",
+  "short_name": "Roof demo",
+  "description": "Demo of a phone app for roof inspections: slope-by-slope checklist, photos with markup, and a printable report. Sample data only.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ECEEEF",
+  "theme_color": "#ECEEEF",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

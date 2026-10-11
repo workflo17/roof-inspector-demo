@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Roof Inspector Demo</title>
+<meta name="description" content="Demo of a phone app for roof inspections: slope-by-slope checklist, photos with markup, and a printable report. Sample data only.">
+<meta name="theme-color" content="#ECEEEF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F1418" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Roof demo">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<a class="skip" href="#view">Skip to content</a>
+
+<div class="app">
+  <main id="view" tabindex="-1"></main>
+</div>
+
+<div id="sheet" class="sheet" hidden>
+  <div class="sheet-backdrop" data-action="closeSheet"></div>
+  <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="sheet-title" id="sheet-panel"></div>
+</div>
+
+<div id="annot" class="annot" hidden>
+  <div class="annot-bar">
+    <p id="annot-title" class="annot-title">Circle the damage</p>
+  </div>
+  <div class="annot-stage"><canvas id="annot-canvas" aria-label="Photo. Draw with your finger to circle the damage."></canvas></div>
+  <div class="annot-tools">
+    <button type="button" class="btn ghost" data-annot="undo">Undo</button>
+    <button type="button" class="btn ghost" data-annot="clear">Clear</button>
+    <button type="button" class="btn ghost danger" data-annot="remove" aria-label="Remove this photo">Remove</button>
+  </div>
+  <div class="annot-actions">
+    <button type="button" class="btn ghost" data-annot="skip">Skip markup</button>
+    <button type="button" class="btn primary" data-annot="save">Save markup</button>
+  </div>
+</div>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<input id="file" type="file" accept="image/*" capture="environment" hidden aria-label="Take or choose a photo">
+
+<noscript><p style="padding:24px;font:16px system-ui">This demo needs JavaScript turned on.</p></noscript>
+<script src="app.js" defer></script>
+</body>
+</html>

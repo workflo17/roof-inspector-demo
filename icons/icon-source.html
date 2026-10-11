@@ -1,0 +1,17 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>icon</title>
+<style>html,body{margin:0;background:#1E5A7A;overflow:hidden}svg{display:block}</style></head>
+<body>
+<svg id="i" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect width="512" height="512" fill="#1E5A7A"/>
+  <path d="M86 268 L256 108 L426 268" fill="none" stroke="#fff" stroke-width="40" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M150 300 L256 200 L362 300" fill="none" stroke="#fff" stroke-opacity=".38" stroke-width="22" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M184 352 L236 404 L336 300" fill="none" stroke="#F26B21" stroke-width="42" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>
+<script>
+  // Headless Chrome will not shrink its window below roughly 500px, so the page sizes the
+  // icon to the pixel size given in the URL hash (#192) and the screenshot crops to it.
+  var s = parseInt(location.hash.slice(1), 10) || 512, el = document.getElementById('i');
+  el.style.width = s + 'px'; el.style.height = s + 'px';
+</script>
+</body></html>
