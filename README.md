@@ -1,8 +1,8 @@
 # Roof inspector demo
 
-A phone-first demo of a roof inspection app, built for Kenneth Edwards's Craigslist post "I need an app built for roof inspections" (Rough and Ready, CA). He is starting a roof inspection company and wants something like the app he used before. This demo shows what a first version could do, on made-up data.
+A phone-first demo of a roof inspection app, for a new roof inspection company that wants a phone app for the field. It shows what a first version could do, on made-up data. Built by Don Florencio, [WorkfloHQ.com](https://workflohq.com).
 
-Status 2026-10-11: built and tested locally. Not published. Kenneth has not seen it. He asked Don to follow up at the end of the week of 2026-10-12 (Friday 2026-10-16) after he writes up his own walkthrough of an inspection.
+Live: https://workflo17.github.io/roof-inspector-demo/ (open it on a phone; sample data only, nothing is sent anywhere).
 
 ## What it does
 
@@ -17,7 +17,7 @@ Sync is simulated: there is no server, so the Synced badge only shows how it wou
 
 ## What research said it needs
 
-See [RESEARCH.md](RESEARCH.md): offline first, organized by slope, photos tied to items with markup, a simple rating scale, a handoff-ready report. It also lists what the real build would add and the questions to ask Kenneth.
+See [RESEARCH.md](RESEARCH.md): offline first, organized by slope, photos tied to items with markup, a simple rating scale, a handoff-ready report. It also lists what the real build would add and the questions to ask the client.
 
 ## Run it
 
@@ -27,7 +27,7 @@ Plain HTML, CSS and JavaScript, no build step and no dependencies. Any static se
 python -m http.server 5290
 ```
 
-Open http://localhost:5290. Service workers and install need https or localhost, so a phone on the same Wi-Fi cannot install it from a plain http address. Publish it (GitHub Pages) to try it on a phone.
+Open http://localhost:5290. Service workers and install need https or localhost, so a phone on the same Wi-Fi cannot install it from a plain http address. Use the live link above to try it on a phone.
 
 ## Check it
 

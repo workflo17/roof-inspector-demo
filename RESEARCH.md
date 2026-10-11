@@ -1,6 +1,6 @@
 # Roof inspection app: what it needs
 
-Prepared 2026-10-11 for Kenneth Edwards's post "I need an app built for roof inspections" (Rough and Ready, CA). He is starting a roof inspection company and wants something like the app he used at a previous employer, but remembers only part of it. This note is what the research says an inspection app has to do, so the demo is built around the real workflow and not a guess.
+Prepared 2026-10-11 for an inspector starting a roof inspection company who wants an app like the one used at a previous employer but remembers only part of it. This note is what the research says an inspection app has to do, so the demo is built around the real workflow and not a guess.
 
 Most sources are contractor and vendor pages. Treat their numbers as typical practice, not standards.
 
@@ -43,12 +43,12 @@ Most sources are contractor and vendor pages. Treat their numbers as typical pra
 - "Could not inspect" with a reason, weather lookup for storm dates
 - Estimates and roof measurements (usually bought from an aerial-measurement service, not built)
 
-## Questions for Kenneth
+## Questions for the client
 
 1. What kinds of inspections: insurance and hail, pre-purchase, maintenance, post-storm?
 2. Which roof materials, mostly asphalt?
-3. Does he walk the roof, use a drone, or both?
-4. Who receives the report, and does it need his logo and terms on it?
-5. What did the old app do that he liked, and what drove him nuts?
-6. How many inspections a week, and does anyone else inspect for him?
+3. Does the inspector walk the roof, use a drone, or both?
+4. Who receives the report, and does it need a logo and terms on it?
+5. What did the old app do well, and what was frustrating?
+6. How many inspections a week, and does anyone else inspect for the company?
 7. iPhone or Android?
